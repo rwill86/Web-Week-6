@@ -1,0 +1,32 @@
+     <div class="chatpage" style="margin: auto; width: 50%; padding: 10px;">
+	     <h1>Welcome {{userName}}</h1>	 
+	     <button *ngIf="userName" (click)="logout()" class="logout">Logout</button>
+         <input [(ngModel)]="message" placeholder="enter text"/> 
+         <button (click)="sendMessage()">Send</button>
+		 <div class="messages">
+		     <div *ngFor="let message of messages" class="message">
+			     <p>{{message.text}}</p>
+			 </div>
+		 </div>
+     </div>
+	 
+	 
+	 
+<!-- ngif example - with sugar -->
+     <!--<h4>Example of *ngIF</h4>
+     <div *ngIf="isLoggedIn">I'm logged in</div>
+	 <h4>Example of *ngIF/*ngIfElse</h4>
+	 <ng-template [ngIf]="isLoggedIn" [ngIfElse]="loggedOut"><div appHighlight>Welcome back, friend.</div></ng-template>
+	 <ng-template #loggedOut><div>Please friend, login.</div></ng-template>
+	 <h4>Example of *ngIF (alternate syntax</h4>
+	 <ng-template bind-ngIf="isLoggedIn"><div>Welcome back, friend.</div></ng-template>
+	 <h4>Example of *ngFor</h4>
+	 <ul>
+	     <li *ngfor="let list of lists; let i = index; let c = count;">{{i + 1}} of {{c}}--<a routerLink=''>{{list.userName}}</a>-{{list.userID}}</li>		 
+	 </ul>
+	 <h4>Example of Property Binding Synyax</h4>
+	 <img src="asssets/images/bug3.png" width="{{imageWidth}}" height="{{imageHeigh}}" appHighlight />
+	 <img src="asssets/images/bug3.png" [width]="imageWidth" [height]="imageHeigh"/>
+	 <img src="asssets/images/bug3.png" bind-width="imageWidth" bind-height="imageHeigh"/>
+	  <h4>Example of Pipes</h4>
+	     Name apperas here ->{{userName | uppercase}} -->
